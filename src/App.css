@@ -27,4 +27,13 @@
   height: 600px;
   background-color: aquamarine;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.search_result{
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  margin: 10px;
 }

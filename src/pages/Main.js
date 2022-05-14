@@ -45,7 +45,7 @@ export default function Main(props) {
 
   useEffect(()=>{
     props.appUsedCarList(usedCarList);
-  },[usedCarList])
+  },)
 
   return (
     <div className='main'>
