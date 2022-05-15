@@ -1,26 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  cursor: pointer;
+}
 .main{
   width: 80%;
-  height: 700px;
-  text-align: center;
+  height: 1200px;
   margin: 0 auto;
-  background-color: aqua;
+  background-color: white;
 }
 .header{
   width: 100%;
   height: 70px;
-  background-color: beige;
   padding-top: 30px;
+  padding-left: 30px;
 }
 .usedcar_list{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 .carlist{
-  width: 19%;
+  width: 95%;
   height: 200px;
-  background-color: beige;
-  margin: 10px auto;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(207, 206, 206);
+  padding-bottom: 10px;
 }
 .search_list{
   width: 80%;
@@ -33,7 +46,88 @@
 }
 .search_result{
   width: 100px;
-  height: 100px;
+  height: 150px;
   background-color: brown;
   margin: 10px;
+}
+.imgdiv{
+  position: relative;
+  width: 300px;
+  height: 100%;
+  overflow: hidden;
+  background-color: beige;
+}
+.innerimg{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carinfo{
+  width: 100%;
+}
+
+.carinfo h2{
+  margin-top: 70px;
+  padding-left: 10px;
+}
+
+.carinfo a{
+  position: relative;
+  float: right;
+  top: -17%;
+  padding-right: 30px;
+}
+
+.carinfo_detail{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 10px;
+}
+.carinfo_detail p{
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid rgb(197, 197, 197);
+}
+
+.carinfo_detail p:last-child{
+  border: 0;
+}
+
+.car_price{
+  position: relative;
+  float: right;
+  top: -17%;
+  padding-right: 30px;
+}
+
+.pagination_btn{
+  position: absolute;
+  width: 80%;
+  height: 100px;
+  top: 170%;
+  left: 10%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pagination_btn button{
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background-color: rgb(0, 255, 170);
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+}
+
+.pagination_btn button:hover{
+  background-color: rgb(100, 100, 255);
+}
+
+.view_detail{
+  width: 90%;
+  height: 500px;
+  background-color: beige;
+  margin: 0 auto;
 }
