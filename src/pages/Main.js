@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import CarList from './CarList'
+import DetailSearch from './DetailSearch';
 import Pagination from './Pagination'
 
 export default function Main(props) {
@@ -27,7 +28,6 @@ export default function Main(props) {
   }
 
   useEffect(()=>{
-
   },)
 
   return (
@@ -44,6 +44,7 @@ export default function Main(props) {
       <Pagination usedCarList={props.usedCarList}
         currentPost={currentPost}
         setCurrentPage={setCurrentPage} />
+      <DetailSearch/>
     </div>
   )
 }
