@@ -9,21 +9,19 @@ export default function CarList(props) {
 
   const postList = props.currentPost.map((data, index) => (
     <div key={index} className="carlist">
-      <div className='imgdiv'>
-        <img src={data.carimage} className='innerimg' />
-      </div>
-      <div className='carinfo'>
-        <h2>{data.modelname}</h2>
-        <p className='carinfo_detail'>
-          <p>{data.modelyear}</p>
-          <p>{data.licenseplate}</p>
-          <p>{data.fuel}</p>
-        </p>
-        <a onClick={() => viewDetail(data.Substationnumber)}>상세정보</a>
-        <div className='car_price'>
-          <h4>{data.price}만원</h4>
-        </div>
-      </div>
+      <div className="card">
+            <img src={data.carimage} alt={data.modelname}/>
+              <div class="container">
+                <h4>{data.modelname}</h4>
+                <span className='detail'>
+                <p>{data.modelyear}</p>
+                <p>{data.licenseplate}</p>
+                <p>{data.fuel}</p>
+                </span>
+                <h4>{data.price}만원</h4>
+                <a onClick={() => viewDetail(data.Substationnumber)}>상세정보</a>
+              </div>
+          </div> 
     </div>
   ))
 

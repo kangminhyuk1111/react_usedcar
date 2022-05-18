@@ -1,3 +1,5 @@
+
+
 *{
   margin: 0;
   padding: 0;
@@ -5,8 +7,11 @@
 a{
   cursor: pointer;
 }
+a:hover{
+  color: blue;
+}
 .main{
-  width: 80%;
+  width: 100%;
   height: 1200px;
   margin: 0 auto;
   background-color: white;
@@ -17,23 +22,27 @@ a{
   padding-top: 30px;
   padding-left: 30px;
 }
-.usedcar_list{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-}
-.carlist{
-  width: 95%;
-  height: 200px;
-  background-color: white;
-  margin: 0 auto;
-  margin-top: 10px;
+.content{
+  width: 100%;
+  height: 60%;
+  background-color: aqua;
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid rgb(207, 206, 206);
-  padding-bottom: 10px;
+}
+.content_search{
+  width: 20%;
+  height: 100%;
+  background-color: blue;
+}
+.content_search_view{
+  width: 80%;
+  height: 100%;
+  background-color: red;
+}
+.usedcar_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .search_list{
   width: 80%;
@@ -105,7 +114,7 @@ a{
   position: absolute;
   width: 80%;
   height: 100px;
-  top: 170%;
+  top: 120%;
   left: 10%;
   margin: 0 auto;
   text-align: center;
@@ -130,4 +139,57 @@ a{
   height: 500px;
   background-color: beige;
   margin: 0 auto;
+}
+
+.carlist{
+  margin-top: 40px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.card p{
+  font-size: 10px;
+}
+
+.card img{
+  width: 100%;
+  height: 60%;
+  border-radius: 5px 5px 0 0;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container a{
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.detail{
+  display: flex;
+  flex-direction: row;
+}
+
+.detail p{
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

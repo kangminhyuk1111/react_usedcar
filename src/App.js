@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Main from './pages/Main';
-import Search from './pages/Search';
 import ViewDetail from './pages/ViewDetail';
 import DetailSearch from './pages/DetailSearch';
 import './App.css';
@@ -18,6 +17,10 @@ function App() {
     setUsedCarList(res.data);
   }
 
+  const postSearchData = (searchData) =>{
+    setUsedCarList(searchData)
+  }
+
   useEffect(()=>{
     resData()
   },[])
@@ -25,10 +28,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Main usedCarList={usedCarList}/>}/>
-        <Route path='/search' element={<Search list={usedCarList}/>}/>
+        <Route path='/' element={<Main usedCarList={usedCarList}
+        postSearchData={postSearchData}/>}/>
         <Route path='/view' element={<ViewDetail/>}/>
-        <Route path='/detailsearch' element={<DetailSearch/>}/>
+        <Route path='/' element={<DetailSearch/>}/>
       </Routes>
     </div>
   )

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 function DetailSearch() {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        window.location.href = `/search?carSize=${data.carSize}&carManu=${data.carManufacturer}&fuel=${data.fuel}`;
+        window.location.href = `/?carSize=${data.carSize}&carManu=${data.carManufacturer}&fuel=${data.fuel}`;
     };
     return (
         <div className="detail_search">
