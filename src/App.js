@@ -21,6 +21,10 @@ function App() {
     setUsedCarList(searchData)
   }
 
+  const appDetailSearchData = (data) =>{
+    setUsedCarList(data);
+  }
+
   useEffect(()=>{
     resData()
   },[])
@@ -29,7 +33,8 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Main usedCarList={usedCarList}
-        postSearchData={postSearchData}/>}/>
+        postSearchData={postSearchData}
+        appDetailSearchData={appDetailSearchData}/>}/>
         <Route path='/view' element={<ViewDetail/>}/>
         <Route path='/' element={<DetailSearch/>}/>
       </Routes>

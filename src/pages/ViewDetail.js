@@ -7,7 +7,7 @@ function ViewDetail() {
   const urlSearchParams = urlParams.searchParams;
   const substationnumber = urlSearchParams.get('Substationnumber');
   console.log(substationnumber);
-
+  
   const reqViewDetails = async () => {
     const req = await axios.get(`/api/viewdetail/` + substationnumber)
     console.log(req.data[0])

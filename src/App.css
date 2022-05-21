@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 a{
   cursor: pointer;
@@ -20,24 +21,28 @@ a:hover{
   width: 100%;
   height: 70px;
   padding-top: 30px;
-  padding-left: 30px;
-}
-.content{
-  width: 100%;
-  height: 60%;
-  background-color: aqua;
+  padding-bottom: 30px;
+  text-align: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  background-color: rgb(144, 144, 255);
+}
+.content{
+  width: 70%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
 .content_search{
   width: 20%;
   height: 100%;
-  background-color: blue;
+  padding: 10px;
 }
 .content_search_view{
   width: 80%;
   height: 100%;
-  background-color: red;
 }
 .usedcar_list{
   display: flex;
@@ -114,7 +119,7 @@ a:hover{
   position: absolute;
   width: 80%;
   height: 100px;
-  top: 120%;
+  top: 130%;
   left: 10%;
   margin: 0 auto;
   text-align: center;
@@ -142,6 +147,7 @@ a:hover{
 }
 
 .carlist{
+  width: 33%;
   margin-top: 40px;
 }
 
@@ -189,7 +195,49 @@ a:hover{
 }
 
 .detail p{
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-right: 1px solid gray;
+}
+
+.detail p:first-child{
+  padding-left: 0px;
+}
+
+.detail p:last-child{
+  border: none;
+}
+
+.detail_search{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inner_box{
+  width: 50%;
+}
+.search_form{
+  width: 550px;
+  padding-top: 16px;
+}
+.search_input{
+  width: 75%;
+  height: 80%;
+  border: 0;
+}
+.search_btn{
+  width: 20%;
+  height: 80%;
+  background-color: rgb(98, 98, 255);
+  border: 0;
+}
+
+.header h2{
+  width: 200px;
+  padding-top: 16px;
+  font-weight:bolder;
+  color: #fff;
 }
