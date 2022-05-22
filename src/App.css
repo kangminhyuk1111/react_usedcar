@@ -1,23 +1,25 @@
-
-
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
 }
-a{
+
+a {
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   color: blue;
 }
-.main{
+
+.main {
   width: 100%;
   height: 1200px;
   margin: 0 auto;
   background-color: white;
 }
-.header{
+
+.header {
   width: 100%;
   height: 70px;
   padding-top: 30px;
@@ -28,28 +30,33 @@ a:hover{
   justify-content: center;
   background-color: rgb(144, 144, 255);
 }
-.content{
+
+.content {
   width: 70%;
   height: 60%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
 }
-.content_search{
+
+.content_search {
   width: 20%;
   height: 100%;
   padding: 10px;
 }
-.content_search_view{
+
+.content_search_view {
   width: 80%;
   height: 100%;
 }
-.usedcar_list{
+
+.usedcar_list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.search_list{
+
+.search_list {
   width: 80%;
   height: 600px;
   background-color: aquamarine;
@@ -58,74 +65,79 @@ a:hover{
   flex-direction: row;
   flex-wrap: wrap;
 }
-.search_result{
+
+.search_result {
   width: 100px;
   height: 150px;
   background-color: brown;
   margin: 10px;
 }
-.imgdiv{
+
+.imgdiv {
   position: relative;
   width: 300px;
   height: 100%;
   overflow: hidden;
   background-color: beige;
 }
-.innerimg{
+
+.innerimg {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.carinfo{
+
+.carinfo {
   width: 100%;
 }
 
-.carinfo h2{
+.carinfo h2 {
   margin-top: 70px;
   padding-left: 10px;
 }
 
-.carinfo a{
+.carinfo a {
   position: relative;
   float: right;
   top: -17%;
   padding-right: 30px;
 }
 
-.carinfo_detail{
+.carinfo_detail {
   display: flex;
   flex-direction: row;
   width: 100%;
   font-size: 10px;
 }
-.carinfo_detail p{
+
+.carinfo_detail p {
   padding-right: 10px;
   padding-left: 10px;
   border-right: 1px solid rgb(197, 197, 197);
 }
 
-.carinfo_detail p:last-child{
+.carinfo_detail p:last-child {
   border: 0;
 }
 
-.car_price{
+.car_price {
   position: relative;
   float: right;
   top: -17%;
   padding-right: 30px;
 }
 
-.pagination_btn{
+.pagination_btn {
   position: absolute;
   width: 80%;
   height: 100px;
-  top: 130%;
+  top: 170%;
   left: 10%;
   margin: 0 auto;
   text-align: center;
 }
 
-.pagination_btn button{
+.pagination_btn button {
   width: 30px;
   height: 30px;
   border: 0;
@@ -135,18 +147,18 @@ a:hover{
   text-align: center;
 }
 
-.pagination_btn button:hover{
+.pagination_btn button:hover {
   background-color: rgb(100, 100, 255);
 }
 
-.view_detail{
+.view_detail {
   width: 90%;
   height: 500px;
   background-color: beige;
   margin: 0 auto;
 }
 
-.carlist{
+.carlist {
   width: 33%;
   margin-top: 40px;
 }
@@ -156,17 +168,17 @@ a:hover{
   width: 80%;
   height: 300px;
   margin: 0 auto;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   background-color: white;
   border-radius: 5px;
 }
 
-.card p{
+.card p {
   font-size: 10px;
 }
 
-.card img{
+.card img {
   width: 100%;
   height: 60%;
   border-radius: 5px 5px 0 0;
@@ -174,7 +186,7 @@ a:hover{
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
@@ -184,17 +196,17 @@ a:hover{
   flex-direction: column;
 }
 
-.container a{
+.container a {
   font-size: 12px;
   padding-top: 10px;
 }
 
-.detail{
+.detail {
   display: flex;
   flex-direction: row;
 }
 
-.detail p{
+.detail p {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-right: 5px;
@@ -202,42 +214,127 @@ a:hover{
   border-right: 1px solid gray;
 }
 
-.detail p:first-child{
+.detail p:first-child {
   padding-left: 0px;
 }
 
-.detail p:last-child{
+.detail p:last-child {
   border: none;
 }
 
-.detail_search{
+.detail_search {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.inner_box{
+.inner_box {
   width: 50%;
 }
-.search_form{
+
+.search_form {
   width: 550px;
   padding-top: 16px;
 }
-.search_input{
+
+.search_input {
   width: 75%;
   height: 80%;
   border: 0;
+  padding-left: 10px;
 }
-.search_btn{
+
+.search_btn {
   width: 20%;
   height: 80%;
   background-color: rgb(98, 98, 255);
   border: 0;
 }
 
-.header h2{
+.header h2 {
   width: 200px;
   padding-top: 16px;
-  font-weight:bolder;
+  font-weight: bolder;
   color: #fff;
+}
+
+.accordian_show {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in;
+  height: 12%;
+  visibility: visible;
+  overflow: hidden;
+}
+
+.accordian_show:nth-child(4){
+  height: 37%;
+}
+
+.accordian_show:nth-child(6){
+  height: 7%;
+  margin-bottom: 8px;
+}
+
+.accordian_show:nth-child(8){
+  height: 7%;
+  margin-bottom: 8px;
+}
+
+.accordian_show:nth-child(10){
+  height: 7%;
+  margin-bottom: 8px;
+}
+
+.accordian_hide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in;
+  height: 0vh;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.detail_search{
+  margin-top: 30px;
+}
+
+.detail_search h3{
+  border-top: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.detail_search h2{
+  margin-bottom: 5px;
+}
+
+.submit_btn{
+  width: 100%;
+  background-color: rgb(147, 147, 255);
+  border: 0;
+}
+
+.checkbox_input{
+  width: 17px;
+  height: 17px;
+  margin-top: 4px;
+}
+
+.inner_box{
+  display: flex;
+  flex-direction: row;
+  padding-top:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.inner_box div{
+  padding-left: 10px;
+}
+
+.detail_search form{
+  border-top : 1px solid black;
 }

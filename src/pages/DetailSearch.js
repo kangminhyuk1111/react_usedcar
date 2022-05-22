@@ -16,6 +16,7 @@ function DetailSearch(props) {
     ]
     const [isChecked, setIsChecked] = useState(false);
     const [checkedItems, setCheckedItems] = useState(new Array());
+    const [toggle, setToggle] = useState(false)
 
     const checkHandler = ({ target }) => {
         setIsChecked(!isChecked);
@@ -27,8 +28,9 @@ function DetailSearch(props) {
         if (isChecked) {
             checkedItems.push(id);
             setCheckedItems(checkedItems);
-        } else if (!isChecked && checkedItems.has(id)) {
-            checkedItems.delete(id);
+        } else if (!isChecked && checkedItems.includes(id)) {
+            const idx = checkedItems.indexOf(id);
+            checkedItems.splice(idx, 1);
             setCheckedItems(checkedItems);
         }
         console.log(checkedItems);
@@ -41,7 +43,8 @@ function DetailSearch(props) {
                 type='checkbox'
                 value={item.name}
                 onChange={(e) => { checkHandler(e) }}
-                name="productionData" />
+                name="productionData" 
+                className='checkbox_input'/>
             <div>{item.name}</div>
         </label>
     ))
@@ -52,7 +55,8 @@ function DetailSearch(props) {
                 type='checkbox'
                 value={item.size}
                 onChange={(e) => { checkHandler(e) }}
-                name="carSize" />
+                name="carSize" 
+                className='checkbox_input'/>
             <div>{item.size}</div>
         </label>
     ))
@@ -65,9 +69,22 @@ function DetailSearch(props) {
         e.preventDefault();
         const lowPrice = e.target.low_price.value;
         const highPrice = e.target.high_price.value;
+        const lowModelYear = e.target.low_modelYear.value;
+        const highModelYear = e.target.high_modelYear.value;
+        const lowDistance = e.target.low_distance.value;
+        const highDistance = e.target.high_distance.value;
         console.log(checkedItems);
-        const res = await axios.get(`/api/submitdata/${lowPrice}/${highPrice}/${checkedItems}`);
+        const res = await axios.get(`/api/submitdata/${lowPrice}/${highPrice}/${lowModelYear}/${highModelYear}/${lowDistance}/${highDistance}/${checkedItems}`);
         props.detailSearchData(res.data)
+    }
+
+    const showDiv = (e) => {
+        if (toggle == true) {
+            setToggle(false)
+        } else {
+            setToggle(true)
+        }
+        console.log(e)
     }
 
     useEffect(() => {
@@ -75,12 +92,32 @@ function DetailSearch(props) {
     }, [])
     return (
         <div className="detail_search">
+            <h2>상세 검색</h2>
             <form onSubmit={formSubmit} method='post'>
-                {data1}
-                {data2}
-                <input type='text' name="low_price" onChange={inputChange} />
-                <input type='text' name="high_price" onChange={inputChange} />
-                <input type='submit' />
+                <h3>국산/수입<button onClick={(e) => showDiv(e)}>on</button></h3>
+                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                    {data1}
+                </div>
+                <h3>차종<button onClick={(e) => showDiv(e)}>on</button></h3>
+                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                    {data2}
+                </div>
+                <h3>주행거리<button onClick={() => showDiv()}>on</button></h3>
+                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                    <input type='text' name="low_distance" onChange={inputChange} placeholder="최소"/>
+                    <input type='text' name="high_distance" onChange={inputChange} placeholder="최고"/>
+                </div>
+                <h3>연식<button onClick={() => showDiv()}>on</button></h3>
+                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                    <input type='text' name="low_modelYear" onChange={inputChange} placeholder="최소"/>
+                    <input type='text' name="high_modelYear" onChange={inputChange} placeholder="최고"/>
+                </div>
+                <h3>가격<button onClick={() => showDiv()}>on</button></h3>
+                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                    <input type='text' name="low_price" onChange={inputChange} placeholder="최소"/>
+                    <input type='text' name="high_price" onChange={inputChange} placeholder="최고"/>
+                </div>
+                <input type='submit' value='검색' className='submit_btn'/>
             </form>
         </div>
     );

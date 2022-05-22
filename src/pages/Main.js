@@ -6,7 +6,7 @@ import axios from 'axios';
 
 export default function Main(props) {
   console.log(props.usedCarList);
-  const [postPerPage, setPostPerPage] = useState(6);
+  const [postPerPage, setPostPerPage] = useState(9);
   const [currentPage, setCurrentPage] = useState(1);
   const [slicePosts, setSlicePosts] = useState([]);
   const [searchText, setSearchText] = useState('');
@@ -51,7 +51,7 @@ export default function Main(props) {
           <DetailSearch detailSearchData={detailSearchData}/>
         </div>
         <div className='content_search_view'>
-          <CarList currentPost={currentPost(props.usedCarList)} />
+          <CarList currentPost={currentPost(props.usedCarList)}/>
           <Pagination usedCarList={props.usedCarList}
             currentPost={currentPost}
             setCurrentPage={setCurrentPage} />

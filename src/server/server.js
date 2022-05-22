@@ -41,7 +41,7 @@ app.get('/api/viewdetail/:substationnumber',(req,res)=>{
     })
 })
 
-app.get('/api/submitdata/:lowPrice/:highPrice/:checkedItems',(req,res)=>{
+app.get('/api/submitdata/:lowPrice/:highPrice/:lowModelYear/:highModelYear/:lowDistance/:highDistance/:checkedItems',(req,res)=>{
     console.log('/api/submitdata/')
     console.log(req.params);
     const checkedItems = req.params.checkedItems;
