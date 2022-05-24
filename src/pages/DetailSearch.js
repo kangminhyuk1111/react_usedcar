@@ -43,27 +43,27 @@ function DetailSearch(props) {
     }
 
     const data1 = productionData.map((item) => (
-        <label key={item.id} className="inner_box">
+        <label key={item.id} className="inner_box" id='box1'>
             <input
                 type='checkbox'
                 value={item.name}
                 onChange={(e) => { checkHandler(e) }}
                 name="productionData" 
-                className='checkbox_input'
-                ref={aaa}/>
+                className='checkbox_input'/>
+                <label for="inner_box"></label>
             <div>{item.name}</div>
         </label>
     ))
 
     const data2 = carSize.map((item) => (
-        <label key={item.num} className="inner_box">
+        <label key={item.num} className="inner_box" id='box2'>
             <input
                 type='checkbox'
                 value={item.size}
                 onChange={(e) => { checkHandler(e) }}
                 name="carSize" 
-                className='checkbox_input'
-                ref={aaa}/>
+                className='checkbox_input'/>
+                <label for="inner_box"></label>
             <div>{item.size}</div>
         </label>
     ))
@@ -147,21 +147,21 @@ function DetailSearch(props) {
                 </div>
                 <h3>주행거리<a onClick={() => showDiv3()}><i class="fa-solid fa-angle-down"></i></a></h3>
                 <div className={toggle3 ? 'accordian_show' : 'accordian_hide'}>
-                    <input type='text' name="low_distance" onChange={inputChange} placeholder="최소"/>
+                    <input type='text' name="low_distance" onChange={inputChange} placeholder="최소(KM)"/>
                     <p>~</p>
-                    <input type='text' name="high_distance" onChange={inputChange} placeholder="최고"/>
+                    <input type='text' name="high_distance" onChange={inputChange} placeholder="최고(KM)"/>
                 </div>
                 <h3>연식<a onClick={() => showDiv4()}><i class="fa-solid fa-angle-down"></i></a></h3>
                 <div className={toggle4 ? 'accordian_show' : 'accordian_hide'}>
-                    <input type='text' name="low_modelYear" onChange={inputChange} placeholder="최소"/>
+                    <input type='text' name="low_modelYear" onChange={inputChange} placeholder="최소(EX)2022)"/>
                     <p>~</p>
-                    <input type='text' name="high_modelYear" onChange={inputChange} placeholder="최고"/>
+                    <input type='text' name="high_modelYear" onChange={inputChange} placeholder="최고(EX)2022)"/>
                 </div>
                 <h3>가격<a onClick={() => showDiv5()}><i class="fa-solid fa-angle-down"></i></a></h3>
                 <div className={toggle5 ? 'accordian_show' : 'accordian_hide'}>
-                    <input type='text' name="low_price" onChange={inputChange} placeholder="최소"/>
+                    <input type='text' name="low_price" onChange={inputChange} placeholder="최소(만원)"/>
                     <p>~</p>
-                    <input type='text' name="high_price" onChange={inputChange} placeholder="최고"/>
+                    <input type='text' name="high_price" onChange={inputChange} placeholder="최고(만원)"/>
                 </div>
                 <input type='submit' value='상세조건 검색' className='submit_btn'/>
             </form>
