@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Yoon";
+  src: url(./font/KoPubDotumLight.otf) format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Yoon";
 }
 
 a {
@@ -19,6 +24,52 @@ a:hover {
   background-color: white;
 }
 
+.main_header {
+  width: 66%;
+  height: 70px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.main_header img {
+  width: 20%;
+  height: 70px;
+}
+
+.main_header_link {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+}
+
+.main_header_link a {
+  width: 120px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main_header_members {
+  display: flex;
+  flex-direction: row;
+  width: 13%;
+  padding-left: 40px;
+  padding-top: 30px;
+}
+
+.main_header_members a {
+  width: 100px;
+  text-decoration: none;
+}
+
 .header {
   width: 100%;
   height: 70px;
@@ -28,7 +79,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgb(144, 144, 255);
+  background-color: #3f64c3;
 }
 
 .content {
@@ -131,7 +182,7 @@ a:hover {
   position: absolute;
   width: 80%;
   height: 100px;
-  top: 170%;
+  top: 175%;
   left: 10%;
   margin: 0 auto;
   text-align: center;
@@ -141,7 +192,7 @@ a:hover {
   width: 30px;
   height: 30px;
   border: 0;
-  background-color: rgb(0, 255, 170);
+  background-color: #3f64c3;
   cursor: pointer;
   margin: 5px;
   text-align: center;
@@ -194,6 +245,7 @@ a:hover {
   padding: 2px 16px;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .container a {
@@ -247,13 +299,14 @@ a:hover {
 .search_btn {
   width: 20%;
   height: 80%;
-  background-color: rgb(98, 98, 255);
+  background-color: #3B8AF7;
   border: 0;
+  color: white;
 }
 
 .header h2 {
   width: 200px;
-  padding-top: 16px;
+  padding-top: 24px;
   font-weight: bolder;
   color: #fff;
 }
@@ -263,28 +316,70 @@ a:hover {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease-in;
-  height: 12%;
+  height: 50px;
   visibility: visible;
   overflow: hidden;
 }
 
-.accordian_show:nth-child(4){
-  height: 37%;
+.accordian_show input {
+  border: 1px solid gray;
+  padding-left: 4px;
 }
 
-.accordian_show:nth-child(6){
-  height: 7%;
-  margin-bottom: 8px;
+.accordian_show ::placeholder {
+  color: black;
+  font-size: 8px;
 }
 
-.accordian_show:nth-child(8){
-  height: 7%;
-  margin-bottom: 8px;
+.accordian_hide input{
+  border: 1px solid gray;
+  padding-left: 4px;
 }
 
-.accordian_show:nth-child(10){
-  height: 7%;
-  margin-bottom: 8px;
+.accordian_hide ::placeholder{
+  color: black;
+  font-size: 8px;
+}
+
+.accordian_show:nth-child(4) {
+  height: 151px;
+}
+
+.accordian_show:nth-child(6) {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.accordian_show:nth-child(6) input {
+  width: 40%;
+  height: 20px;
+}
+
+.accordian_show:nth-child(8) {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.accordian_show:nth-child(8) input {
+  width: 40%;
+  height: 20px;
+}
+
+.accordian_show:nth-child(10) {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.accordian_show:nth-child(10) input {
+  width: 40%;
+  height: 20px;
 }
 
 .accordian_hide {
@@ -297,44 +392,88 @@ a:hover {
   overflow: hidden;
 }
 
-.detail_search{
+.accordian_hide:nth-child(2n+6) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s ease-in;
+  height: 0vh;
+  visibility: hidden;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.accordian_hide:nth-child(2n+6) input {
+  width: 40%;
+  height: 20px;
+}
+
+.accordian_show p{
+  padding-top: 3px;
+}
+
+.accordian_hide p{
+  padding-top: 3px;
+}
+
+.detail_search {
+  width: 100%;
   margin-top: 30px;
 }
 
-.detail_search h3{
-  border-top: 1px solid black;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.detail_search form {
+  width: 100%;
 }
 
-.detail_search h2{
+.detail_search h3 {
+  width: 100%;
+  border-top: 1px solid gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.detail_search h2 {
+  font-size: 21px;
   margin-bottom: 5px;
 }
 
-.submit_btn{
+.submit_btn {
+  margin-top: 10px;
   width: 100%;
-  background-color: rgb(147, 147, 255);
+  height: 40px;
+  background-color: #3f64c3;
   border: 0;
+  color: white;
 }
 
-.checkbox_input{
-  width: 17px;
-  height: 17px;
+.checkbox_input {
+  width: 11px;
+  height: 11px;
   margin-top: 4px;
 }
 
-.inner_box{
+.inner_box {
   display: flex;
   flex-direction: row;
-  padding-top:10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
-.inner_box div{
-  padding-left: 10px;
+.inner_box div {
+  padding-top: 3px;
+  padding-left: 5px;
 }
 
-.detail_search form{
-  border-top : 1px solid black;
+
+.detail_search h3:last-child {
+  border-bottom: 1px solid gray;
+}
+
+.detail_search label {
+  font-size: 11px;
 }

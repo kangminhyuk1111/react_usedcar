@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 
 function DetailSearch(props) {
@@ -16,7 +16,12 @@ function DetailSearch(props) {
     ]
     const [isChecked, setIsChecked] = useState(false);
     const [checkedItems, setCheckedItems] = useState(new Array());
-    const [toggle, setToggle] = useState(false)
+    const [toggle1, setToggle1] = useState(false)
+    const [toggle2, setToggle2] = useState(false)
+    const [toggle3, setToggle3] = useState(false)
+    const [toggle4, setToggle4] = useState(false)
+    const [toggle5, setToggle5] = useState(false)
+    const aaa = useRef(null);
 
     const checkHandler = ({ target }) => {
         setIsChecked(!isChecked);
@@ -44,7 +49,8 @@ function DetailSearch(props) {
                 value={item.name}
                 onChange={(e) => { checkHandler(e) }}
                 name="productionData" 
-                className='checkbox_input'/>
+                className='checkbox_input'
+                ref={aaa}/>
             <div>{item.name}</div>
         </label>
     ))
@@ -56,7 +62,8 @@ function DetailSearch(props) {
                 value={item.size}
                 onChange={(e) => { checkHandler(e) }}
                 name="carSize" 
-                className='checkbox_input'/>
+                className='checkbox_input'
+                ref={aaa}/>
             <div>{item.size}</div>
         </label>
     ))
@@ -78,46 +85,85 @@ function DetailSearch(props) {
         props.detailSearchData(res.data)
     }
 
-    const showDiv = (e) => {
-        if (toggle == true) {
-            setToggle(false)
+    const showDiv1 = (e) => {
+        console.log(aaa)
+        if (toggle1 == true) {
+            setToggle1(false)
         } else {
-            setToggle(true)
+            setToggle1(true)
         }
-        console.log(e)
+    }
+
+    const showDiv2 = (e) => {
+        console.log(aaa)
+        if (toggle2 == true) {
+            setToggle2(false)
+        } else {
+            setToggle2(true)
+        }
+    }
+
+    const showDiv3 = (e) => {
+        console.log(aaa)
+        if (toggle3 == true) {
+            setToggle3(false)
+        } else {
+            setToggle3(true)
+        }
+    }
+
+    const showDiv4 = (e) => {
+        console.log(aaa)
+        if (toggle4 == true) {
+            setToggle4(false)
+        } else {
+            setToggle4(true)
+        }
+    }
+
+    const showDiv5 = (e) => {
+        console.log(aaa)
+        if (toggle5 == true) {
+            setToggle5(false)
+        } else {
+            setToggle5(true)
+        }
     }
 
     useEffect(() => {
 
-    }, [])
+    })
     return (
         <div className="detail_search">
             <h2>상세 검색</h2>
             <form onSubmit={formSubmit} method='post'>
-                <h3>국산/수입<button onClick={(e) => showDiv(e)}>on</button></h3>
-                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
-                    {data1}
+                <h3>국산/수입<a onClick={() => showDiv1()}><i class="fa-solid fa-angle-down"></i></a></h3>
+                <div className={toggle1 ? 'accordian_show' : 'accordian_hide'}>
+                    {data1} 
                 </div>
-                <h3>차종<button onClick={(e) => showDiv(e)}>on</button></h3>
-                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                <h3>차종<a onClick={() => showDiv2()}><i class="fa-solid fa-angle-down"></i></a></h3>
+                <div className={toggle2 ? 'accordian_show' : 'accordian_hide'}>
                     {data2}
                 </div>
-                <h3>주행거리<button onClick={() => showDiv()}>on</button></h3>
-                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                <h3>주행거리<a onClick={() => showDiv3()}><i class="fa-solid fa-angle-down"></i></a></h3>
+                <div className={toggle3 ? 'accordian_show' : 'accordian_hide'}>
                     <input type='text' name="low_distance" onChange={inputChange} placeholder="최소"/>
+                    <p>~</p>
                     <input type='text' name="high_distance" onChange={inputChange} placeholder="최고"/>
                 </div>
-                <h3>연식<button onClick={() => showDiv()}>on</button></h3>
-                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                <h3>연식<a onClick={() => showDiv4()}><i class="fa-solid fa-angle-down"></i></a></h3>
+                <div className={toggle4 ? 'accordian_show' : 'accordian_hide'}>
                     <input type='text' name="low_modelYear" onChange={inputChange} placeholder="최소"/>
+                    <p>~</p>
                     <input type='text' name="high_modelYear" onChange={inputChange} placeholder="최고"/>
                 </div>
-                <h3>가격<button onClick={() => showDiv()}>on</button></h3>
-                <div className={toggle ? 'accordian_show' : 'accordian_hide'}>
+                <h3>가격<a onClick={() => showDiv5()}><i class="fa-solid fa-angle-down"></i></a></h3>
+                <div className={toggle5 ? 'accordian_show' : 'accordian_hide'}>
                     <input type='text' name="low_price" onChange={inputChange} placeholder="최소"/>
+                    <p>~</p>
                     <input type='text' name="high_price" onChange={inputChange} placeholder="최고"/>
                 </div>
-                <input type='submit' value='검색' className='submit_btn'/>
+                <input type='submit' value='상세조건 검색' className='submit_btn'/>
             </form>
         </div>
     );
