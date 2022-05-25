@@ -4,6 +4,7 @@ import axios from 'axios';
 import Main from './pages/Main';
 import ViewDetail from './pages/ViewDetail';
 import DetailSearch from './pages/DetailSearch';
+import MyCard from './pages/MyCard';
 import './App.css';
 
 
@@ -37,7 +38,8 @@ function App() {
         appDetailSearchData={appDetailSearchData}/>}/>
         <Route path='/view' element={<ViewDetail/>}/>
         <Route path='/' element={<DetailSearch/>}/>
-      </Routes>
+        <Route path='/card' element={<MyCard/>}/>
+      </Routes> 
     </div>
   )
 }

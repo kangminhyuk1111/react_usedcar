@@ -316,7 +316,7 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s;
   height: 57px;
   visibility: visible;
   overflow: hidden;
@@ -387,7 +387,7 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s;
   height: 0vh;
   visibility: hidden;
   overflow: hidden;
@@ -397,7 +397,7 @@ a:hover {
   width: 100%;
   display: flex;
   flex-direction: row;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s;
   height: 0vh;
   visibility: hidden;
   overflow: hidden;
