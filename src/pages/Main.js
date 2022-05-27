@@ -4,6 +4,7 @@ import DetailSearch from './DetailSearch';
 import Pagination from './Pagination'
 import axios from 'axios';
 import logoImage from '../img/logo.jpg'
+import Card from './Card';
 
 export default function Main(props) {
   console.log(props.usedCarList);
@@ -65,6 +66,13 @@ export default function Main(props) {
           <DetailSearch detailSearchData={detailSearchData} />
         </div>
         <div className='content_search_view'>
+          <div className='commons'>
+            <Card/>
+          </div>
+          <p className='inner_line'></p>
+          <span className='view_count'>
+            <p className='pt-4 text-xl font-bold'>라이브 스튜디오</p><p className='pt-6 text-xs'>오토벨이 직접 진단한 차량을 홈서비스 신청할 수 있는 차량입니다.</p>
+          </span>
           <CarList currentPost={currentPost(props.usedCarList)} />
           <Pagination usedCarList={props.usedCarList}
             currentPost={currentPost}
