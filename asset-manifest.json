@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c656b8e5.css",
-    "main.js": "/static/js/main.a3b5b613.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/KoPubDotumLight.otf": "/static/media/KoPubDotumLight.4d6f148f151687db533f.otf",
-    "static/media/logo.jpg": "/static/media/logo.9590ff7c4079274f6083.jpg",
-    "index.html": "/index.html",
-    "main.c656b8e5.css.map": "/static/css/main.c656b8e5.css.map",
-    "main.a3b5b613.js.map": "/static/js/main.a3b5b613.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/react_usedcar/static/css/main.e834c52a.css",
+    "main.js": "/react_usedcar/static/js/main.822a741b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/react_usedcar/static/js/787.28cb0dcd.chunk.js",
+    "static/media/KoPubDotumLight.otf": "/react_usedcar/static/media/KoPubDotumLight.4d6f148f151687db533f.otf",
+    "static/media/logo.jpg": "/react_usedcar/static/media/logo.9590ff7c4079274f6083.jpg",
+    "index.html": "/react_usedcar/index.html",
+    "main.e834c52a.css.map": "/react_usedcar/static/css/main.e834c52a.css.map",
+    "main.822a741b.js.map": "/react_usedcar/static/js/main.822a741b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/react_usedcar/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c656b8e5.css",
-    "static/js/main.a3b5b613.js"
+    "static/css/main.e834c52a.css",
+    "static/js/main.822a741b.js"
   ]
 }
