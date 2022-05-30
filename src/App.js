@@ -4,8 +4,8 @@ import axios from 'axios';
 import Main from './pages/Main';
 import ViewDetail from './pages/ViewDetail';
 import DetailSearch from './pages/DetailSearch';
-import Card from './pages/Card';
 import './App.css';
+import SmallBtn from './pages/SmallBtn';
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         appDetailSearchData={appDetailSearchData}/>}/>
         <Route path='/view' element={<ViewDetail/>}/>
         <Route path='/' element={<DetailSearch/>}/>
-        <Route path='/card' element={<Card/>}/>
+        <Route path='/card' element={<SmallBtn/>}/>
       </Routes> 
     </div>
   )

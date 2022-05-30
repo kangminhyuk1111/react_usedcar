@@ -13,12 +13,12 @@ export default function CarList(props) {
             <img src={data.carimage} alt={data.modelname}/>
               <div class="container">
                 <h4 className='mt-2 font-bold'>{data.modelname}</h4>
-                <span className='detail'>
-                <p>{data.modelyear}</p>
+                <span className='detail text-zinc-600'>
+                <p >{data.modelyear}</p>
                 <p>{data.licenseplate}</p>
                 <p>{data.fuel}</p>
                 </span>
-                <h4 className='font-semibold'>{data.price}만원</h4>
+                <h6 className='text-sm font-semibold'><t className="pr-0.5 text-lg">{data.price}</t>만원</h6>
                 <a onClick={() => viewDetail(data.Substationnumber)}>상세정보</a>
               </div>
           </div> 

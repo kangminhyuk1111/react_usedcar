@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-  color: blue;
+  color:#3B8AF7;
 }
 
 .main {
@@ -232,6 +232,7 @@ a:hover {
   transition: 0.3s;
   background-color: white;
   border-radius: 5px;
+  padding-bottom: 10px;
 }
 
 .card p {
@@ -520,13 +521,13 @@ input[type="checkbox"]:checked + label::after{
 
 .main_card div{
   width: 28%;
-  transition: .5s;
+  transition: .3s;
 }
 
 .main_card div:hover{
   background-color: #3f64c3;
   color: white;
-  transition: .5s;
+  transition: .3s;
 }
 
 .inner_line{
@@ -547,3 +548,8 @@ input[type="checkbox"]:checked + label::after{
 .view_count p{
   padding-left: 10px;
 }
+
+.container h6 t{
+  color: #3f64c3;
+}
+

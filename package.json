@@ -1,5 +1,5 @@
 {
-  "homepage": "https://kangminhyuk1111.github.io/react_usedcar",
+  "homepage": "https://kangminhyuk1111.github.io/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.27.2",
+    "axios": "^0.27.2", 
     "express": "^4.18.1",
     "gh-pages": "^4.0.0",
     "mysql": "^2.18.1",
@@ -22,7 +22,7 @@
   "proxy": "http://localhost:4000",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build", 
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npn run build",
