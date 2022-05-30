@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c656b8e5.css",
+    "main.js": "/static/js/main.a3b5b613.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/KoPubDotumLight.otf": "/static/media/KoPubDotumLight.4d6f148f151687db533f.otf",
+    "static/media/logo.jpg": "/static/media/logo.9590ff7c4079274f6083.jpg",
+    "index.html": "/index.html",
+    "main.c656b8e5.css.map": "/static/css/main.c656b8e5.css.map",
+    "main.a3b5b613.js.map": "/static/js/main.a3b5b613.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c656b8e5.css",
+    "static/js/main.a3b5b613.js"
+  ]
+}
