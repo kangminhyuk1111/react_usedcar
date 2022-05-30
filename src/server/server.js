@@ -41,23 +41,13 @@ app.get('/api/viewdetail/:substationnumber',(req,res)=>{
     })
 })
 
-app.get('/api/submitdata/:lowPrice/:highPrice/:lowModelYear/:highModelYear/:lowDistance/:highDistance/:checkedItems',(req,res)=>{
+app.post('/api/submitdata/:values',(req,res)=>{
     console.log('/api/submitdata/')
-    console.log(req.params);
-    const checkedItems = req.params.checkedItems;
-    const lowPrice = Number(req.params.lowPrice);
-    const highPrice = Number(req.params.highPrice);
-    const item = checkedItems.split(',');
-    console.log(item)  
-    const sql = `select * from usedcar_db where price < ${highPrice}
-    and price > ${lowPrice};`
-    db.query(sql,(err,data)=>{
-        if(!err){
-            res.send(data)
-        }else{
-            console.log(err);
-        }
-    })
+    console.log(req.params.values);
+    const stringifyItem = req.params.values;
+    const values = JSON.parse(stringifyItem)
+    console.log(values.lowPrice);
+    console.log(values.checkedItems)
 })
 
 app.listen(PORT, () => {

@@ -80,10 +80,19 @@ function DetailSearch(props) {
         const highModelYear = e.target.high_modelYear.value;
         const lowDistance = e.target.low_distance.value;
         const highDistance = e.target.high_distance.value;
-        alert(lowPrice)
+        const values = {
+            lowPrice:lowPrice,
+            highPrice:highPrice,
+            lowModelYear:lowModelYear,
+            highModelYear:highModelYear,
+            lowDistance:lowDistance,
+            highDistance:highDistance,
+            checkedItems:checkedItems
+        }
+        const checkValues = JSON.stringify(values)
         console.log(lowPrice,highPrice,lowModelYear,highModelYear,highModelYear,highDistance)
         console.log(checkedItems);
-        const res = await axios.get(`/api/submitdata/${lowPrice}/${highPrice}/${lowModelYear}/${highModelYear}/${lowDistance}/${highDistance}/${checkedItems}`);
+        const res = await axios.post(`/api/submitdata/${checkValues}`);
         props.detailSearchData(res.data)
     }
 
