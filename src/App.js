@@ -33,11 +33,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Main usedCarList={usedCarList}
+        <Route path='/react_usedcar/' element={<Main usedCarList={usedCarList}
         postSearchData={postSearchData}
         appDetailSearchData={appDetailSearchData}/>}/>
-        <Route path='/view' element={<ViewDetail/>}/>
-        <Route path='/' element={<DetailSearch/>}/>
+        <Route path='/react_usedcar/view' element={<ViewDetail/>}/>
         <Route path='/card' element={<SmallBtn/>}/>
       </Routes> 
     </div>

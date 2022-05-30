@@ -4,7 +4,7 @@ export default function CarList(props) {
   console.log(props.currentPost)
 
   const viewDetail = (name) => {
-    window.location.href = `/view?Substationnumber=${name}`
+    window.location.href = `/react_usedcar/view?Substationnumber=${name}`
   }
 
   const postList = props.currentPost.map((data, index) => (
