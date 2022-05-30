@@ -1,5 +1,5 @@
 {
-  "homepage": "https://kangminhyuk1111.github.io/",
+  "homepage": "https://kangminhyuk1111.github.io/react_usedcar/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +25,7 @@
     "build": "react-scripts build", 
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
