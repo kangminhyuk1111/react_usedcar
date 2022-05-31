@@ -48,6 +48,11 @@ app.post('/api/submitdata/:values',(req,res)=>{
     const values = JSON.parse(stringifyItem)
     console.log(values.lowPrice);
     console.log(values.checkedItems)
+    // for(let i = 0;i<values.checkedItems.length;i++){
+    //     console.log(values.checkedItems[i])
+    // }
+    const po = values.checkedItems.join()
+    console.log(po)
 })
 
 app.listen(PORT, () => {
