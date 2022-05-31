@@ -14,7 +14,7 @@ function ViewDetail() {
     const reqData = req.data;
     console.log(reqData);
     const postView = reqData.map(data => (
-      <div key={data.Substationnumber}>
+      <div key={data.Substationnumber} className="">
         <div className='imgdiv'>
           <img src={data.carimage} className='innerimg' />
         </div>
@@ -24,6 +24,8 @@ function ViewDetail() {
         <p>{data.licenseplate}</p>
         <p>{data.color}</p>
         <p>{data.mileage}km</p>
+        <p>{data.seg}</p>
+        <p>{data.size}</p>
       </div>
     ))
     setViewData(postView);

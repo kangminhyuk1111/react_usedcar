@@ -95,7 +95,7 @@ function DetailSearch(props) {
         const res = await axios.post(`/api/submitdata/${checkValues}`);
         props.detailSearchData(res.data)
     }
-
+    
     const showDiv1 = (e) => {
         console.log(aaa)
         if (toggle1 == true) {
