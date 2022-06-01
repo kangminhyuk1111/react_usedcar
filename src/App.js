@@ -23,6 +23,7 @@ function App() {
   }
 
   const appDetailSearchData = (data) =>{
+    console.log(data);
     setUsedCarList(data);
   }
 

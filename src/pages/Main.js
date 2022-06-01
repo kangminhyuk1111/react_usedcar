@@ -17,6 +17,7 @@ export default function Main(props) {
     const lastIdx = postPerPage * currentPage;
     const firstIdx = lastIdx - postPerPage;
     const slicePost = props.usedCarList.slice(firstIdx, lastIdx);
+    console.log(slicePost);
     return slicePost;
   }
 

@@ -81,12 +81,6 @@ function DetailSearch(props) {
         const lowDistance = e.target.low_distance.value;
         const highDistance = e.target.high_distance.value;
         const values = {
-            lowPrice:lowPrice,
-            highPrice:highPrice,
-            lowModelYear:lowModelYear,
-            highModelYear:highModelYear,
-            lowDistance:lowDistance,
-            highDistance:highDistance,
             checkedItems:checkedItems
         }
         const checkValues = JSON.stringify(values)
