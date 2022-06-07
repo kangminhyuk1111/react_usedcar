@@ -81,6 +81,23 @@ app.post('/api/submitdata/:values', (req, res) => {
     }
 })
 
+app.get('/api/similarCars/:substationnumber', (req, res) => {
+    console.log('/api/similarCars')
+    const text = req.params.substationnumber;
+    console.log(text)
+    const sql = `select size from usedcar_db where substationnumber like '%${text}%';`  
+    db.query(sql, (err, data) => {
+        if (!err) {
+            const carSize = data[0].size;
+            db.query(`select * from usedcar_db where size like '${carSize}'`,(err,data)=>{
+                res.send(data);
+            })
+        } else {
+            console.log(err);
+        }
+    });
+})
+
 app.listen(PORT, () => {
     console.log(`Server run : http://localhost:${PORT}/`)
 })

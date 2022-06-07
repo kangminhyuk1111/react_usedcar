@@ -6,6 +6,7 @@ import sellerImg from '../img/sellerImg.png';
 
 function ViewDetail() {
   const [viewData, setViewData] = useState([]);
+  const [carSize, setCarSize] = useState('');
   const urlParams = new URL(window.location.href);
   const urlSearchParams = urlParams.searchParams;
   const substationnumber = urlSearchParams.get('Substationnumber');
@@ -18,7 +19,7 @@ function ViewDetail() {
     console.log(reqData);
     const postView = reqData.map(data => (
       <div key={data.Substationnumber} className="w-4/5 h-full m-auto text-center bg-white pb-4">
-        <div className='w-4/5 h-4/5 m-auto '>
+        <div className='w-10/12 h-4/5 pt-6 m-auto '>
           <img src={data.carimage} className='w-full h-full relative' />
         </div>
         <div className='bg-white flex flex-row justify-around w-full m-auto'>
@@ -56,6 +57,7 @@ function ViewDetail() {
       </div>
     ))
     setViewData(postView);
+    setCarSize(reqData[0].size);
   }
 
   useEffect(() => {
@@ -64,11 +66,11 @@ function ViewDetail() {
   return (
     <div className='h-100vh'>
       <Navbar />
-      <div className='w-4/5 m-auto h-100vh bg-zinc-500'>
+      <div className='w-4/5 m-auto pt-4 h-100vh bg-zinc-500'>
         {viewData}
       </div>
       <div className='w-full h-80 bg-zinc-400'>
-        <SimilarCar/>
+        <SimilarCar substationnumber={substationnumber}/>
       </div>
     </div>
 
