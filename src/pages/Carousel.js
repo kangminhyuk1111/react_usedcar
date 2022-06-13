@@ -8,7 +8,7 @@ export default function Carousel(props){
         dots: true,
         infinite: true,
         speed: 700,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1
       })
       return (

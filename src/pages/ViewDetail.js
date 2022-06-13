@@ -67,10 +67,10 @@ function ViewDetail() {
   return (
     <div className='h-100vh'>
       <Navbar />
-      <div className='w-4/5 m-auto pt-4 h-100vh bg-zinc-500 rounded-t-lg'>
+      <div className='w-4/5 m-auto pt-4 h-100vh bg-blue-400 rounded-t-lg'>
         {viewData}
       </div>
-      <div className='w-4/5 m-auto h-100vh bg-zinc-500 pb-12 rouded-b-lg'>
+      <div className='w-4/5 m-auto h-100vh bg-blue-400 pb-12 rouded-b-lg'>
         <SimilarCar substationnumber={substationnumber}/>
       </div>
     </div>

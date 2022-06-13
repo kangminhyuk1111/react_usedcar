@@ -13,7 +13,7 @@ export default function SimilarCar(props) {
     const mapData = resData.map((data, idx) => (
       <div className='w-1/5 h-72 mt-8 rounded-lg p-4'>
         <img src={data.carimage} className='h-56 rounded-lg' />
-        <div className='flex flex-row justify-around'>
+        <div className='flex flex-row justify-around bg-blue-300 rounded-lg'>
           <p className='text-sm border-b-1.5 border-neutral-50 p-2'>{data.modelname}</p>
           <p className='text-sm border-b-1.5 border-neutral-50 p-2'>{data.seg}</p>
           <p className='text-sm border-b-0.5 border-neutral-50 p-2'>{data.mileage}km</p>
