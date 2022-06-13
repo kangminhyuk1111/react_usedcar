@@ -19,9 +19,9 @@ function ViewDetail() {
     const reqData = req.data;
     console.log(reqData);
     const postView = reqData.map(data => (
-      <div key={data.Substationnumber} className="w-4/5 h-full m-auto text-center bg-white pb-4">
+      <div key={data.Substationnumber} className="w-4/5 h-full m-auto text-center bg-white pb-4 rounded-lg">
         <div className='w-10/12 h-4/5 pt-6 m-auto '>
-          <img src={data.carimage} className='w-full h-full relative' />
+          <img src={data.carimage} className='w-full h-full relative rounded-lg' />
         </div>
         <div className='bg-white flex flex-row justify-around w-full m-auto'>
           <div className='bg-white w-5/12 h-80 p-6'>
@@ -67,12 +67,11 @@ function ViewDetail() {
   return (
     <div className='h-100vh'>
       <Navbar />
-      <div className='w-4/5 m-auto pt-4 h-100vh bg-zinc-500'>
+      <div className='w-4/5 m-auto pt-4 h-100vh bg-zinc-500 rounded-t-lg'>
         {viewData}
       </div>
-      <div className='w-full h-96 bg-zinc-400 pb-6'>
+      <div className='w-4/5 m-auto h-100vh bg-zinc-500 pb-12 rouded-b-lg'>
         <SimilarCar substationnumber={substationnumber}/>
-        <Carousel/>
       </div>
     </div>
 

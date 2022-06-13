@@ -11,9 +11,13 @@ export default function SimilarCar(props) {
     const resData = res.data;
     console.log(resData);
     const mapData = resData.map((data, idx) => (
-      <div className='w-1/5 h-72 bg-zinc-200 mt-8'>
-        <img src={data.carimage} className='h-56 m-0 p-0'/>
-        <p>{data.size}</p>
+      <div className='w-1/5 h-72 mt-8 rounded-lg p-4'>
+        <img src={data.carimage} className='h-56 rounded-lg' />
+        <div className='flex flex-row justify-around'>
+          <p className='text-sm border-b-1.5 border-neutral-50 p-2'>{data.modelname}</p>
+          <p className='text-sm border-b-1.5 border-neutral-50 p-2'>{data.seg}</p>
+          <p className='text-sm border-b-0.5 border-neutral-50 p-2'>{data.mileage}km</p>
+        </div>
       </div>
     ))
     setMapData(mapData);
@@ -23,7 +27,7 @@ export default function SimilarCar(props) {
   }, [])
   return (
     <div className='w-4/5 h-full m-auto flex flex-row flex-wrap justify-center'>
-      <Carousel mapData={mapData}/>
+      <Carousel mapData={mapData} />
     </div>
   )
 }
