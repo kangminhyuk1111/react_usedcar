@@ -8,6 +8,7 @@ import Carousel from './Carousel';
 function ViewDetail() {
   const [viewData, setViewData] = useState([]);
   const [carSize, setCarSize] = useState('');
+  const [carName , setCarName] = useState('');
   const urlParams = new URL(window.location.href);
   const urlSearchParams = urlParams.searchParams;
   const substationnumber = urlSearchParams.get('Substationnumber');
@@ -17,7 +18,8 @@ function ViewDetail() {
     const req = await axios.get(`/api/viewdetail/` + substationnumber)
     console.log(req.data[0])
     const reqData = req.data;
-    console.log(reqData);
+    console.log(reqData[0].modelname);
+    setCarName(reqData[0].modelname);
     const postView = reqData.map(data => (
       <div key={data.Substationnumber} className="w-4/5 h-full m-auto text-center bg-white pb-4 rounded-lg">
         <div className='w-10/12 h-4/5 pt-6 m-auto '>
@@ -71,7 +73,8 @@ function ViewDetail() {
         {viewData}
       </div>
       <div className='w-4/5 m-auto h-100vh bg-blue-400 pb-12 rouded-b-lg'>
-        <SimilarCar substationnumber={substationnumber}/>
+        <SimilarCar substationnumber={substationnumber}
+        carName={carName}/>
       </div>
     </div>
 

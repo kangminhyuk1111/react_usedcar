@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick/lib/slider';
 
 export default function Carousel(props){
+    console.log(props.mapData)
       const [settings ,setSettings] = useState({
         dots: true,
         infinite: true,
@@ -13,7 +14,7 @@ export default function Carousel(props){
       })
       return (
         <div className='w-full h-100vh'>
-          <h1 className='text-center mt-6'>검색한 차량과 비슷한 차량들 입니다.</h1>
+          <h1 className='text-center text-zinc-700 mt-6'><a className='text-2xl pr-1'>{props.carName}</a>와 비슷한 유형의 차량들</h1>
           <Slider {...settings}>
               {props.mapData}
           </Slider>
