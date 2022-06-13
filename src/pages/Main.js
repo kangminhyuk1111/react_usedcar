@@ -62,11 +62,11 @@ export default function Main(props) {
           <p className='inner_line'></p>
           <span className='view_count'>
             <p className='pt-4 text-xl font-bold'>라이브 스튜디오</p><p className='pt-6 text-xs'>오토벨이 직접 진단한 차량을 홈서비스 신청할 수 있는 차량입니다.</p>
-          </span>
-          <CarList currentPost={currentPost(props.usedCarList)} />
-          <Pagination usedCarList={props.usedCarList}
+            <Pagination usedCarList={props.usedCarList}
             currentPost={currentPost}
             setCurrentPage={setCurrentPage} />
+          </span>
+          <CarList currentPost={currentPost(props.usedCarList)} />
         </div>
       </div>
 

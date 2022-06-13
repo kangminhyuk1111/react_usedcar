@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import SimilarCar from './SimilarCar';
 import sellerImg from '../img/sellerImg.png';
+import Carousel from './Carousel';
 
 function ViewDetail() {
   const [viewData, setViewData] = useState([]);
@@ -36,7 +37,7 @@ function ViewDetail() {
               </div>
             </div>
           </div>
-          <div className='bg-white w-5/12 h-80 p-6'>
+          <div className='bg-white w-5/12 h-full p-6'>
             <p className='text-3xl mb-4 m-auto'>상세정보</p>
             <div className='w-11/12 m-auto bg-zinc-200'>
               <p className='text-sm border-b-2 border-neutral-50'>{data.mileage}km</p>
@@ -69,8 +70,9 @@ function ViewDetail() {
       <div className='w-4/5 m-auto pt-4 h-100vh bg-zinc-500'>
         {viewData}
       </div>
-      <div className='w-full h-80 bg-zinc-400'>
+      <div className='w-full h-96 bg-zinc-400 pb-6'>
         <SimilarCar substationnumber={substationnumber}/>
+        <Carousel/>
       </div>
     </div>
 

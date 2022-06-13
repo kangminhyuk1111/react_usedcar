@@ -6,6 +6,7 @@ import ViewDetail from './pages/ViewDetail';
 import DetailSearch from './pages/DetailSearch';
 import './App.css';
 import SmallBtn from './pages/SmallBtn';
+import Carusel from './pages/Carousel';
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
         postSearchData={postSearchData}
         appDetailSearchData={appDetailSearchData}/>}/>
         <Route path='/react_usedcar/view' element={<ViewDetail/>}/>
-        <Route path='/card' element={<SmallBtn/>}/>
+        <Route path='/card' element={<Carusel/>}/>
       </Routes> 
     </div>
   )
