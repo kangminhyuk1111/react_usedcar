@@ -1,0 +1,45 @@
+.sellcar_main{
+    width: 100%;
+    height: 570px;
+    background: url(https://static.glovis.net/images/contents/sell-main-bg.jpg);
+    background-size: cover;
+}
+.sellcar_main_intro{
+    position: relative;
+    width: 35%;
+    height: 74%;
+    background-color: #3B8AF7;
+    top: 13%;
+    left: 17%;
+}
+.sellcar_main_intro ul{
+    display: flex;
+    flex-direction: row;
+}
+.sellcar_main_intro ul li{
+    width: 33%;
+    height: 96px;
+    text-align: center;
+    color: white;
+    padding-top: 42px;
+    border-bottom: 1px solid white;
+}
+.sellcar_main_intro ul li a:hover{
+    color: white;
+    border-bottom: 2px solid white;
+    transition: .3s;
+}
+.intro_1{
+    font-size: 36px;
+    display: block;
+    padding: 42px 0px 0px 46px;
+    color: white;
+}
+.intro_1 h2{
+    display: flex;
+    flex-direction: row;
+}
+.intro_1 h2 p{
+    font-weight: 700;
+    font-size: 36px;
+}

@@ -3,11 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Main from './pages/Main';
 import ViewDetail from './pages/ViewDetail';
-import DetailSearch from './pages/DetailSearch';
 import './App.css';
-import SmallBtn from './pages/SmallBtn';
 import Carusel from './pages/Carousel';
-
+import SellCar from './pages/SellCar';
 
 function App() {
   const [usedCarList , setUsedCarList] = useState([]);
@@ -40,6 +38,7 @@ function App() {
         appDetailSearchData={appDetailSearchData}/>}/>
         <Route path='/react_usedcar/view' element={<ViewDetail/>}/>
         <Route path='/card' element={<Carusel/>}/>
+        <Route path='/react_usedcar/sellcar' element={<SellCar/>}/>
       </Routes> 
     </div>
   )
