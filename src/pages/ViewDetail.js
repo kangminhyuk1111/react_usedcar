@@ -3,7 +3,6 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import SimilarCar from './SimilarCar';
 import sellerImg from '../img/sellerImg.png';
-import Carousel from './Carousel';
 
 function ViewDetail() {
   const [viewData, setViewData] = useState([]);
